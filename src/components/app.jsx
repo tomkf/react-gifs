@@ -7,6 +7,9 @@ class App extends Component {
         return (<div>
             <div className="left scene">
             <SearchBar />
+            <div className="selected gif">
+            
+            </div>
             </div>
             <div className="right scene"></div>
         </div>)
