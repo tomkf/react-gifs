@@ -1,7 +1,12 @@
-import React, { Component } from 'react';   
+import React, { Component } from 'react';
+import giphy from 'giphy-api';
 import SearchBar from './searchBar.jsx';
 import Gif from './gif.jsx';
 import GifList from './gifList.jsx';
+
+
+const GIPHY_API_KEY = '1KMPHCBIOe3hOjJwCJQX49sRc6cM0oIm';
+
 
 
 class App extends Component {
@@ -14,13 +19,20 @@ class App extends Component {
      }
  }
 
-
+ search = (query) => {
+    giphy({ apiKey: GIPHY_API_KEY, https: true })
+      .search({
+        q: query,
+        rating: 'g',
+        limit: 10
+      }, (err, result) => {
+        this.setState({
+          gifs: result.data
+        });
+      });
+  }
 
     render (){
-const gifs =[
-    {id: }, 
-    {id: },
-]
 
         return (<div>
             <div className="left scene">

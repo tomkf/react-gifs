@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class SearchBar extends Component {
 const handleUpdate = (event) => {
-    console.log(this.target.value)
+    console.log(event.target.value)
 }
 
 
