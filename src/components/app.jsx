@@ -5,6 +5,17 @@ import GifList from './gifList.jsx';
 
 
 class App extends Component {
+ constructor(props){
+     super(props)
+
+     this.state = {
+         gifs: [], 
+         selectedGifId:
+     }
+ }
+
+
+
     render (){
 const gifs =[
     {id: }, 
@@ -15,11 +26,11 @@ const gifs =[
             <div className="left scene">
             <SearchBar />
             <div className="selected-gif">
-            <Gif id="" />
+            <Gif id={this.state.selectedGifId} />
             </div>
             </div>
             <div className="right scene">
-            < GifList gifs={gifs}/>
+            < GifList gifs={this.state.gifs}/>
             </div>
         </div>)
     }

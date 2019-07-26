@@ -1,8 +1,13 @@
 import React, { Component } from 'react';   
 
 class SearchBar extends Component {
+const handleUpdate = (event) => {
+    console.log(this.target.value)
+}
+
+
 render(){
-    return (<input type="text" className="form-control form-search" />)
+    return (<input type="text" className="form-control form-search" onUpdate={this.handleUpdate}/>)
 }
 }
 
