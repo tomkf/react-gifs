@@ -34,18 +34,20 @@ class App extends Component {
 
     render (){
 
-        return (<div>
-            <div className="left scene">
-            <SearchBar search={this.search}/>
-            <div className="selected-gif">
-            <Gif id={this.state.selectedGifId} />
+        return (
+            <div>
+              <div className="left-scene">
+                <SearchBar searchFunction={this.search} />
+                <div className="selected-gif">
+                  <Gif id={this.state.selectedGifId} />
+                </div>
+              </div>
+              <div className="right-scene">
+                <GifList gifs={this.state.gifs} selectGif={this.selectGif} />
+              </div>
             </div>
-            </div>
-            <div className="right scene">
-            < GifList gifs={this.state.gifs}/>
-            </div>
-        </div>)
-    }
-}
+          );
+        }
+      }
 
 export default App;
