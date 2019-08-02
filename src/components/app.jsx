@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import giphy from 'giphy-api';
-import SearchBar from './searchBar.jsx';
-import Gif from './gif.jsx';
-import GifList from './gifList.jsx';
+import SearchBar from './searchBar';
+import Gif from './gif';
+import GifList from './gifList';
 
 
-const GIPHY_API_KEY = '1KMPHCBIOe3hOjJwCJQX49sRc6cM0oIm';
+const GIPHY_API_KEY = '0oBSSVIQskubCE8AQCe1Aeg8ue97l3eD';
 
 
 
